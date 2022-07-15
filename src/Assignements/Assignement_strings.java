@@ -1,6 +1,5 @@
 package Assignements;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Assignement_strings {
@@ -14,10 +13,10 @@ public class Assignement_strings {
         System.out.print("Enter a Name: ");
         String name = scanner.nextLine();
         name = name.toUpperCase();
-        String result = "";
+        String result;
 
         if (name.startsWith("A") && name.endsWith("L")) {
-            result = name.replace("A", "B");
+            result = name.replaceFirst("A", "B");
         }else if (name.startsWith("B") && name.endsWith("L")) {
             if (name.contains("A")) {
                 result = name.replace(name.charAt(1), 'G');
