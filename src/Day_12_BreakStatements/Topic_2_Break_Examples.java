@@ -21,7 +21,7 @@ public class Topic_2_Break_Examples {
         int sum = 0;
         for (int i = 0; i <= 10; i++) {
             sum += i;
-            if (sum >= 20) {
+            if (sum+i >= 20) {
                 break;
             }
         }
