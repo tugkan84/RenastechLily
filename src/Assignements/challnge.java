@@ -19,7 +19,7 @@ public class challnge {
                 System.out.println(result);
                 break;
             }
-            System.out.println("pls enter direction:");
+            System.out.println("Please enter direction:");
             String direction = scan.next();
 
             switch (direction.toLowerCase()) {
