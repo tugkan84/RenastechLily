@@ -2,7 +2,7 @@ package Assignements;
 
 import java.util.Scanner;
 
-public class Assignement_pal {
+public class Assignement_substring_Palindrome {
     //Write code where:
     //- User is asked to enter a string,
     //- Use that string to see how many of 3 character substring is Palindrome 
@@ -16,23 +16,21 @@ public class Assignement_pal {
         String word = scanner.nextLine();
         int count = 0;
         String substring = "";
-        for (int i = 0; i <= word.length()-3; i++) {
-            substring =word.substring(i,i+3);
-            boolean palindrome = false;
-            String reversed = "";
 
-            for (int j = substring.length()-1; j >=0; j--) {
+        for (int i = 0; i <= word.length() - 3; i++) {   // because we have substring 3 characters so we choose length-3
+            substring = word.substring(i, i + 3);        // if we choose 4 char sub, it can be length-4
+            //  System.out.println(substring);           // for seeing the substrings
+             String reversed = "";
+
+            for (int j = substring.length() - 1; j >= 0; j--) { // make string reverse for checking palindrome
                 reversed = reversed + substring.charAt(j);
             }
-                if (substring.equals(reversed)){
-                    palindrome = true;
-                    count++;
-                    System.out.println("The palindromes are : " +substring);
-                }else{
-                    palindrome =false;
-                }
+            if (substring.equals(reversed)) {
+                count++;
+                System.out.println("The palindromes are : " + substring);
             }
-        System.out.println("The count: "+count);
+        }
+        System.out.println("The count: " + count);
 
     }
 }
