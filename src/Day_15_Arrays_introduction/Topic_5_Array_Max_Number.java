@@ -5,8 +5,9 @@ import java.util.Arrays;
 public class Topic_5_Array_Max_Number {
     public static void main(String[] args) {
         //find the max number in array of int
-        int[] arr = {5,98,3,56,23,7};
-        int max = arr[0];
+        int[] arr = {-5,-98,-3,-56,-23,-7};
+        int max = Integer.MIN_VALUE;
+        //int max = arr[0]; //5
         for (int i = 0; i < arr.length; i++) {
             if (max < arr[i]){
                 max = arr[i];
